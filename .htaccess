@@ -1,0 +1,11 @@
+# Block direct browser access to sensitive folders only
+# view/ is allowed because PHP pages live there
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(src|config|database)/ - [F,L]
+</IfModule>
+
+# Block .env files
+<FilesMatch "^\.env">
+    Require all denied
+</FilesMatch>

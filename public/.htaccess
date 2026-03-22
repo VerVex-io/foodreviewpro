@@ -1,0 +1,11 @@
+Options -Indexes
+
+# Prevent direct access to .env, config, src, database folders
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Pretty URLs (optional - not required for this project)
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
