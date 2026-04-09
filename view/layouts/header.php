@@ -39,11 +39,9 @@ $currentPage = basename($_SERVER['PHP_SELF'], '.php');
   <!-- Logo -->
   <div class="px-5 py-5 border-b border-slate-100">
     <div class="flex items-center gap-3">
-      <div class="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-          <path d="M3 11l19-9-9 19-2-8-8-2z"/>
-        </svg>
-      </div>
+      <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center">
+    <img src="/foodreviewpro/public/images/logo_2.svg" alt="Logo" class="w-10 h-10 object-contain">
+    </div>
       <div>
         <span class="text-base font-semibold text-slate-800">على <span class="text-blue-600">ذوقك</span></span>
         <p class="text-[10px] text-slate-400 uppercase tracking-wide">Admin Dashboard</p>

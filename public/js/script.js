@@ -15,43 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
   sidebarToggle.addEventListener('click', function() {
     sidebar.classList.toggle('-translate-x-full');
   });
-
-  // Navigation between sections
-  const sidebarItems = document.querySelectorAll('.sidebar-item');
-  const contentSections = document.querySelectorAll('.content-section');
-
-  sidebarItems.forEach(item => {
-    item.addEventListener('click', function(e) {
-      e.preventDefault();
-
-      // Get target section from href
-      const targetId = this.getAttribute('href').substring(1);
-
-      // Hide all sections
-      contentSections.forEach(section => {
-        section.classList.add('hidden');
-      });
-
-      // Show target section
-      document.getElementById(targetId).classList.remove('hidden');
-
-      // Update active state in sidebar
-      sidebarItems.forEach(i => {
-        i.classList.remove('bg-primary', 'text-white');
-        i.classList.add('text-gray-700', 'hover:bg-gray-100');
-      });
-
-      this.classList.remove('text-gray-700', 'hover:bg-gray-100');
-      this.classList.add('bg-primary', 'text-white');
-    });
-  });
-
-  // Initialize Charts
-  initCharts();
-
-  // Sample data for demonstration
-  initSampleData();
 });
+
+// Initialize Charts
+initCharts();
+
+// Sample data for demonstration
+initSampleData();
 
 // Initialize Charts
 function initCharts() {

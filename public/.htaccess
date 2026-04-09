@@ -1,11 +1,12 @@
 Options -Indexes
 
-# Prevent direct access to .env, config, src, database folders
+# Prevent direct access to hidden files
 <FilesMatch "^\.">
     Require all denied
 </FilesMatch>
 
-# Pretty URLs (optional - not required for this project)
+# Route all requests through index.php
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
